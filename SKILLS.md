@@ -31,3 +31,4 @@ Capabilities checklist by phase for the AI Knowledge Assistant.
 - When you add or change a capability, update the relevant phase checklist.
 - Each PR should note which skills were touched and how they were tested.
 - Keep scope tight: one evolution at a time.
+- Maintain TODO.md with next steps/backlog so future runs have context.

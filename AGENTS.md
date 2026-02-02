@@ -8,6 +8,7 @@ Shared rules and roles for building the AI Knowledge Assistant (RAG) system.
 - No secrets in git. Use `.env.local` and secret managers; commit `.env.example` only.
 - Deterministic, typed, and tested code where possible.
 - Cost-aware by default; choose the cheapest tool that meets requirements.
+- Keep TODO.md current: add new work, remove or mark done anything obsolete, and update next steps as you make changes.
 
 ## Default Stack (Blaster Mode)
 - Backend: FastAPI (Python), async-first.
