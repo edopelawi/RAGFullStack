@@ -6,6 +6,31 @@ This project is [MIT-licensed.](LICENSE)
 
 This is the way.
 
+## Prereqs
+
+- Docker (Desktop on macOS/Windows, Engine on Linux) with Compose v2. Recommended: Docker Desktop 4.30+ or Compose v2.20+.
+- Node 20+ (if you run the frontend without Docker).
+- Python 3.11+ (if you run the backend without Docker).
+
+Check versions:
+
+```
+docker --version
+docker compose version
+docker-compose version
+```
+
+- macOS (Homebrew docker-compose standalone): use `docker-compose up --build` instead of `docker compose up --build`. If you prefer the plugin form, run:
+
+```
+mkdir -p ~/.docker/cli-plugins
+ln -s $(which docker-compose) ~/.docker/cli-plugins/docker-compose
+docker compose version
+```
+Then `docker compose` works too.
+
+- macOS with Colima: start the daemon before compose: `colima start` (and `docker context use colima` if needed). Check with `docker info`. Stop with `colima stop`.
+
 ## Local run (Docker Compose)
 
 1) Copy env template and set keys:
@@ -19,6 +44,10 @@ cp .env.example .env.local
 
 ```
 docker compose up --build
+```
+or
+```
+docker-compose up --build
 ```
 
 3) Test health:
