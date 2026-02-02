@@ -53,7 +53,7 @@ docker-compose up --build
 3) Test health:
 
 - Backend: http://localhost:8000/healthz
-- Chroma: http://localhost:8001/api/v1/heartbeat
+- Chroma: http://localhost:8001/api/v2/heartbeat (v1 is deprecated)
 
 4) Ingest docs (example request):
 
@@ -76,3 +76,9 @@ curl -X POST http://localhost:8000/query \
 ```
 
 6) Frontend UI: http://localhost:5173 (uses the same backend). Enter a question and optionally override the model.
+
+To stop all services:
+
+```
+docker-compose down
+```
